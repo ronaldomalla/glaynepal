@@ -1,0 +1,280 @@
+{% extends 'myapp/base.html' %}
+{% block title %} HOME {% endblock title %}
+{% block homeactive %}active{% endblock homeactive %}
+{% load static %}
+{% block body %}
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div id="heroCarousel" data-bs-interval="4000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active" style="background-image: url(../static/assets/img/slide/slide-1.jpg);">
+        <div class="carousel-container">
+          <div class="carousel-content animate__animated animate__fadeInUp">
+            <h2>Welcome to <span>G-Lay NEPAL</span></h2>
+            <p> G-lay Nepal and traders supplier and trading company of nepal . The company distribute goods in whole
+              Nepal and the authorized partner for nepal, glay product with nano tec international
+              contact us for the best quality products and service by import/export, supplier and trading company .</p>
+            <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item" style="background-image: url(../static/assets/img/slide/slide-2.jpg);">
+        <div class="carousel-container">
+          <div class="carousel-content animate__animated animate__fadeInUp">
+            <h2>Welcome to <span>G-Lay NEPAL</span></h2>
+            <p> G-lay Nepal and traders supplier and trading company of nepal . The company distribute goods in whole
+              Nepal and the authorized partner for nepal, glay product with nano tec international
+              contact us for the best quality products and service by import/export, supplier and trading company .</p>
+            <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item" style="background-image: url(../static/assets/img/slide/slide-3.jpg);">
+        <div class="carousel-container">
+          <div class="carousel-content animate__animated animate__fadeInUp">
+            <h2>Welcome to <span>G-Lay NEPAL</span></h2>
+            <p> G-lay Nepal and traders supplier and trading company of nepal . The company distribute goods in whole
+              Nepal and the authorized partner for nepal, glay product with nano tec international
+              contact us for the best quality products and service by import/export, supplier and trading company . </p>
+            <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bx bx-left-arrow" aria-hidden="true"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon bx bx-right-arrow" aria-hidden="true"></span>
+    </a>
+
+    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+  </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+  <!-- ======= Cta Section ======= -->
+  <section id="cta" class="cta">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-9 text-center text-lg-left">
+          <h3><span>Let's use G-lay.</span></h3>
+          <p> Now your vechiles will saves diesel / petrol increases pickup, reduce emmision of smokes. There is no vibration and loud noise.Let's use G-lay.This is not a mobil, this is graphene layer and it will increase the lifespan of the engines.</p>
+        </div>
+        <div class="col-lg-3 cta-btn-container">
+          <div class="col-lg-3 cta-btn-container text-center"data-bs-toggle="modal"data-bs-target="#exampleModal">
+            <a class="cta-btn align-middle" href="#">Apply For Dealership</a>
+          </div>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: #f69422;">
+                  <h3 class="modal-title" id="formheader" style="color: white;">Apply For Dealership</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form method="post" action="/apply_form">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                      <input type="text" name='company_name' class="form-control" placeholder="Company Name" id="name"
+                        required>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <input type="text" name='reg_num' class="form-control" placeholder="Company Registration Number" id="reg_num"
+                        required>
+                    </div>
+
+
+                    <div class="mb-3">
+                      <input type="email" name='Email_id' id="Email_id" placeholder="Email" class="form-control"
+                        aria-describedby="emailHelp" required>
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+
+                    <div class="mb-3">
+                      <input type="number" name='mobile' placeholder="Phone Number" class="form-control" id="mobile" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <input type="text" name='place' placeholder="Address"class="form-control" id="place" required>
+                    </div>
+                    <div class="form-group mt-3">
+                      <textarea class="form-control" name="patro" id="patro" rows="5" placeholder="Message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="background-color: #f69422;margin-top: 10px;">Apply</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Cta Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="row"data-aos="fade-right">
+        <h1 class="text-center" style="color:#f69422;margin-top:30px;">Our Services</h1>
+        <h4>G-LAY OFFERS</h4>
+        <ul><br>
+          <li>Great reduction of friction & abrasion,mechanical failure at lubrication system & noise on operating part.</li>
+          <li>Restoration & Protection of worn-out metallic surface.</li>
+          <li>Extend life time of engine oil till 30,000km run due to excellent effect of thermal conductivity,dispensability,heat & oxidation resistance.</li>
+          <li>5 times lower noise and vibration levels as well as 5%-17% inscreases fuel efficiency.</li>
+          <li>Much Smoother,quieter & powerful driving. </li>
+        </ul>
+        <br>
+        <p>Graphene called <strong style="color:red">Wonder Material Of Dream</strong> is substance that is treated as a innovative material of next generation:strongest material in the world:strength of 200 times stronger than steel,thinnest,lightest most conductive and excellent stretch ability with many extra-ordinary characteristics.</p>
+        <ul>
+          <li>Is Cost-effective..</li>
+          <li>Can be implemented in current liquid lines.</li>
+          <li>It is uniquely developed by our proprietary nano technology.</li>
+          <br>
+          <p>It's optimized particle acts on improvement of maximizing lubrication ability without clogging oil filter and outstanding extension of lifetime for chain,bearing,pivot,etc by reduction of friction & abrasion.</p>
+        </ul>
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+          <h1 class="text-center" style="color:#f69422;">Glay Gallery</h1>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" >
+        {% for gallery in glaynepal_gallery %}
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="margin-bottom:100px;">
+          <a target="_blank" href="{% url 'product' %}">
+            <img src="{{ gallery.image.url }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+            
+              <a href="{{ gallery.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            <div class="text-center"><a href="" class="btn-get-started">{{ gallery.picture_title }}</</a></div>
+          </div>
+          {% endfor %}
+
+          {% comment %} <div class="col-lg-4 col-md-6 portfolio-item filter-web"style="margin-bottom:100px;">
+          <a target="_blank" href="{% url 'product' %}">
+            <img src="{% static "assets/img/car.jpg"%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Car G-Lay</h4>
+              <p>Click Here!</p>
+              <a href="{% static "assets/img/car.jpg"%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            <div class="text-center"><a href="" class="btn-get-started">Car G-Lay</a></div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <a target="_blank" href="{% url 'product' %}">
+            <img src="{% static "assets/img/heavy.jpg"%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Heavy Vechiles G-Lay</h4>
+              <p>Click Here!</p>
+              <a href="{% static "assets/img/heavy.jpg"%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+            <div class="text-center"><a href="" class="btn-get-started">Heavy Vechiles G-Lay</a></div>
+          </div> {% endcomment %}
+
+        
+
+        </div>
+
+      </div>
+    </section>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" style="margin-top:10px;">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>G-Lay Nepal & Traders</h3>
+            <p>
+              Butwal-11<br>
+              Rupandehi<br><br>
+              <strong>Phone:</strong> +977 9866587350<br>
+              <strong>Email:</strong> glaynepalandtraders@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Products</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>G-Lay Nepal & Traders</p>
+            <form >
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>G-Lay Nepal</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href=""><br>Bivek Thapa & Shankar Bhandari</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/G-lay-Nepal-103299065089706" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  {% endblock body %}

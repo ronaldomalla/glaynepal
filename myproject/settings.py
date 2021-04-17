@@ -28,7 +28,7 @@ SECRET_KEY = '#%js_1(zc4qjtauwp(knkw7s9xm3@t%*8oow3ud%n$g5!6%oa3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['glaynepal1.herokuapp.com','localhost','glaynepal.com']
 
 
 # Application definition

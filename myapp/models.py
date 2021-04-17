@@ -39,6 +39,6 @@ class glay_gallery(models.Model):
     image=models.ImageField(null=True,blank=True,upload_to="mysite/images")
     picture_title=models.CharField(max_length=100, blank=True)
     
-    def __str__(self):
-        return f"{self.image} {self.picture_title}
+    # def __str__(self):
+    #     return f"{self.image} {self.picture_title}
     
